@@ -14,8 +14,8 @@ body {
 
 #setting input {
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
+  padding: 5px;
+  margin: 5px 0;
   border: none;
   border-bottom: 1px solid #ccc;
   font-size: 16px;
@@ -23,10 +23,6 @@ body {
   font-weight: inherit;
   color: inherit;
   background-color: transparent;
-}
-
-#board {
-  margin-bottom: 200px;
 }
 
 .cell {
