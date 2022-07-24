@@ -127,6 +127,7 @@ heightInput.addEventListener('input', () => {
     boardHeight = document.getElementById('height').value;
     isVisible = generateArray(boardHeight, boardWidth, false);
     boardStatus = generateArray(boardHeight, boardWidth, 0);
+    searched = generateArray(boardHeight, boardWidth, false);
     generateBoard();
 })
 
@@ -136,6 +137,7 @@ widthInput.addEventListener('input', () => {
     boardWidth = document.getElementById('width').value;
     isVisible = generateArray(boardHeight, boardWidth, false);
     boardStatus = generateArray(boardHeight, boardWidth, 0);
+    searched = generateArray(boardHeight, boardWidth, false);
     generateBoard();
 })
 
