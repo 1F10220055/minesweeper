@@ -3,7 +3,6 @@ let boardHeight = 10;
 let boardWidth = 10;
 let bombCount = 10;
 const generateArray = (h, w, init = undefined) => Array.from({ length: h }, () => Array.from({ length: w }, () => init));
-let isVisible = generateArray(boardHeight, boardWidth, false);
 let boardStatus = generateArray(boardHeight, boardWidth, 0);
 let gameStatus = 'waiting';
 let openCount = 0;
@@ -125,7 +124,6 @@ const generateBoard = () => {
 // 高さの変更があった時に、boardHeightを書き換え、Boardを再生成する
 heightInput.addEventListener('input', () => {
     boardHeight = document.getElementById('height').value;
-    isVisible = generateArray(boardHeight, boardWidth, false);
     boardStatus = generateArray(boardHeight, boardWidth, 0);
     searched = generateArray(boardHeight, boardWidth, false);
     generateBoard();
@@ -135,7 +133,6 @@ heightInput.addEventListener('input', () => {
 // 幅の変更があった時に、boardWidthを書き換え、Boardを再生成する
 widthInput.addEventListener('input', () => {
     boardWidth = document.getElementById('width').value;
-    isVisible = generateArray(boardHeight, boardWidth, false);
     boardStatus = generateArray(boardHeight, boardWidth, 0);
     searched = generateArray(boardHeight, boardWidth, false);
     generateBoard();
